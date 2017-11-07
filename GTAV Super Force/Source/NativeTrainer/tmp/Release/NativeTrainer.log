@@ -1,0 +1,9 @@
+﻿D:\Microsoft_Visual_Studio\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(373,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  script.cpp
+script.cpp(1254): warning C4312: 'type cast': conversion from 'Ped' to 'Ped *' of greater size
+  Generating code
+  17 of 341 functions ( 5.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  NativeTrainer.vcxproj -> C:\Users\mattg\Desktop\TP_to_Heli\samples\NativeTrainer\..\..\NativeTrainer.asi
