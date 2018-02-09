@@ -1,0 +1,9 @@
+#!/bin/bash
+# Matthew Guidry | Feb 2018
+
+if [ $# -ne 2 ]; then
+  printf 'Not enough arguments!\n\n  USE: newc <FILENAME> <EDITOR>\n'
+  exit 1
+fi
+printf '#include <stdio.h>\n\nint main(int argc, char **argv[]) {\n    //write program here\n    return 0;\n}' > $1
+$2 $1
