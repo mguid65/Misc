@@ -1,9 +1,20 @@
 #!/bin/bash
 # Matthew Guidry | Feb 2018
 
-if [ $# -ne 2 ]; then
-  printf 'Not enough arguments!\n\n  USE: newc <FILENAME> <EDITOR>\n'
+if [ $# -ne 3 ]; then
+  printf 'Not enough arguments!\n\n  USE: newc <FILENAME> <TYPE> <EDITOR>\n'
   exit 1
 fi
-printf '#include <stdio.h>\n\nint main(int argc, char **argv[]) {\n    //write program here\n    return 0;\n}' > $1
-$2 $1
+if [ $2 == "c" ]; then
+  printf '#include <stdio.h>\n\nint main(int argc, char *argv[]) {\n    //write code here\n    return 0;\n}' > $1
+elif { $2 == "cpp" ]; then
+  printf '\n#include <iostream.h>\nusing namespace std;\n\nint main(int argc, char *argv[]) {\n    //write code here\n    return 0;\n}' > $1
+elif [ $2 == "java" ]; then
+  printf 'class main {\n    public static void main (String[] args) {\n        //write code here\n    }\n}' > $1
+elif [ $2 == "python" ]; then
+  printf 'if __name__ == "__main__":\n    //write code here' > $1
+elif [ $2 == "bash" ]; then
+  printf '#!/bin/bash' > $1
+##elif [ $2 == " " ]; then
+fi
+$3 $1
