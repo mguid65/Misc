@@ -1,0 +1,123 @@
+Crude Performance Profiling
+Looped 25 times to eliminate initial overhead from JIT and outliers
+Maybe could make a case about maintainability over performance here because
+
+
+Dictionary of Arrays
+
+Time: 237ns     System.Collections.Generic.List`1[System.String]
+Time: 96ns     System.Collections.Generic.List`1[System.String]
+Time: 71ns     System.Collections.Generic.List`1[System.String]
+Time: 111ns     System.Collections.Generic.List`1[System.String]
+Time: 71ns     System.Collections.Generic.List`1[System.String]
+Time: 85ns     System.Collections.Generic.List`1[System.String]
+Time: 70ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 82ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 82ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 87ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+AvgTime: 80ns
+
+
+Dictionary of Lists
+
+Time: 72ns     System.Collections.Generic.List`1[System.String]
+Time: 107ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 84ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 83ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 84ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 84ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+AvgTime: 72ns
+
+
+Switch Case with Add
+
+Time: 89ns     System.Collections.Generic.List`1[System.String]
+Time: 39ns     System.Collections.Generic.List`1[System.String]
+Time: 34ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 57ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 50ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 48ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 135ns     System.Collections.Generic.List`1[System.String]
+Time: 31ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 32ns     System.Collections.Generic.List`1[System.String]
+Time: 31ns     System.Collections.Generic.List`1[System.String]
+Time: 33ns     System.Collections.Generic.List`1[System.String]
+AvgTime: 38ns
+
+
+Switch Case with AddRange
+
+Time: 129ns     System.Collections.Generic.List`1[System.String]
+Time: 74ns     System.Collections.Generic.List`1[System.String]
+Time: 85ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 84ns     System.Collections.Generic.List`1[System.String]
+Time: 69ns     System.Collections.Generic.List`1[System.String]
+Time: 83ns     System.Collections.Generic.List`1[System.String]
+Time: 68ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 83ns     System.Collections.Generic.List`1[System.String]
+Time: 77ns     System.Collections.Generic.List`1[System.String]
+Time: 86ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 81ns     System.Collections.Generic.List`1[System.String]
+Time: 66ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 67ns     System.Collections.Generic.List`1[System.String]
+Time: 183ns     System.Collections.Generic.List`1[System.String]
+Time: 80ns     System.Collections.Generic.List`1[System.String]
+Time: 66ns     System.Collections.Generic.List`1[System.String]
+Time: 80ns     System.Collections.Generic.List`1[System.String]
+AvgTime: 77ns
