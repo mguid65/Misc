@@ -44,8 +44,8 @@ def num_to_add_expr(num, depth, limit):
   l_or_r = not l_or_r
 
   expected_res = num
-  x = random.randint(1, num)
-  y = expected_res - x
+  y = random.randint(1, num)
+  x = expected_res - y
 
   if depth == limit: return '(' + str(x) + ' + ' + str(y) + ')'
   if l_or_r: return '(' + str(x) + ' + ' + random.choice(possible_obfuscations)(y, depth+1, limit) + ')'
@@ -72,14 +72,10 @@ def main():
   parser = argparse.ArgumentParser(description='Expand a constant into an expression')
   parser.add_argument('-c', '--constant', help="Constant Value", required=True)
   parser.add_argument('-l', '--limit', help="Expression depth limit", type=int, default=5)
-  parser.add_argument('-f', '--float', help="Is this a float constant", default=False, action='store_true')
 
   args = parser.parse_args()
 
-  if args.float:
-    print(obfuscate(float(args.constant), int(args.limit)))
-  else:
-    print(obfuscate(int(args.constant), int(args.limit)))
+  print(obfuscate(int(args.constant), int(args.limit)))
 
 if __name__ == '__main__':
   main()
